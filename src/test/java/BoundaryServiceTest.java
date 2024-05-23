@@ -5,11 +5,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class BoundaryServiceTest {
 
     @Test
-    @DisplayName("Тест, который упадет из-за падения теста")
-    void testFailingTest() {
+    @DisplayName("Тест, который упадет из-за недостаточного покрытия")
+    void testInsufficientCoverage() {
         BoundaryService service = new BoundaryService();
         int[] marks = {5, 3, 8, 1};
-        int min = service.findMin(marks);
-        assertEquals(8, min);
+        assertThrows(IllegalArgumentException.class, () -> service.findMin(new int[0]));
     }
 }
