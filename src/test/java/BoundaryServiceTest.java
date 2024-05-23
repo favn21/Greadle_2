@@ -7,6 +7,7 @@ class BoundaryServiceTest {
     @Test
     void testFindMin() {
         BoundaryService service = new BoundaryService();
-        assertEquals(999, service.findMin(new int[]{5, 3, 6, 2, 1, 4}));
+        // Уберите некоторые тестовые случаи для уменьшения покрытия
+        assertEquals(1, service.findMin(new int[]{5, 3, 6, 2, 1, 4}));
     }
 }
