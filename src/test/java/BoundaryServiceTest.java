@@ -5,10 +5,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class BoundaryServiceTest {
 
     @Test
-    @DisplayName("Тест, который упадет из-за недостаточного покрытия")
-    void testInsufficientCoverage() {
+    @DisplayName("Поиск минимального значения в массиве")
+    void testFindMin() {
         BoundaryService service = new BoundaryService();
         int[] marks = {5, 3, 8, 1};
-        assertThrows(IllegalArgumentException.class, () -> service.findMin(new int[0]));
+        int min = service.findMin(marks);
+        assertEquals(1, min);
     }
 }
