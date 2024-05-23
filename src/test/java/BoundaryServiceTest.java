@@ -5,9 +5,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class BoundaryServiceTest {
 
     @Test
+    @DisplayName("Поиск минимального значения в массиве")
     void testFindMin() {
         BoundaryService service = new BoundaryService();
-        // Уберите некоторые тестовые случаи для уменьшения покрытия
-        assertEquals(1, service.findMin(new int[]{5, 3, 6, 2, 1, 4}));
+        int[] marks = {5, 3, 8, 1};
+        int min = service.findMin(marks);
+        assertEquals(1, min);
     }
 }
